@@ -1,10 +1,3 @@
 fullname = input("Enter your full name: ")
-result = ""
-
-for char in fullname:
-    if char.islower():
-        result += char.upper()
-    else:
-        result += char.lower()
-
+result = "".join(char.upper() if char.islower() else char.lower() for char in fullname)
 print(result)
